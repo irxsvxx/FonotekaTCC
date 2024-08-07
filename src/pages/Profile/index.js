@@ -15,54 +15,56 @@ export default function Profile() {
 
   if (!fontsLoaded) return null;
 
-  return (
-    <SafeAreaView style={styles.container}>
-        <Text style={styles.text}>Pagina Perfil</Text>
-        <View onLayout={onLayoutRootView} style={styles.container2}>
-          <View onLayout={onLayoutRootView} style={styles.container3}>
-            <Text style={styles.nome}>Luana Querosene</Text>
-          </View>
+  this.tela2 = () => {
+    return (
+      <SafeAreaView style={styles.container}>
+          <Text style={styles.text}>Pagina Perfil</Text>
+          <View onLayout={onLayoutRootView} style={styles.container2}>
+            <View onLayout={onLayoutRootView} style={styles.container3}>
+              <Text style={styles.nome}>Luana Querosene</Text>
+            </View>
 
-          <View onLayout={onLayoutRootView} style={styles.container4}>
-            <Text style={styles.text}>Senha</Text>
-            <TextInput
-              style={styles.input}
-              onChangeText={setNumber}
-              value={number}
-              placeholder="useless placeholder"
-              placeholderTextColor="#000"
-              keyboardType="numeric"
-            />
-
-            <Text style={styles.text}>E-mail</Text>
-            <TextInput
-              style={styles.input}
-              onChangeText={setEmail}
-              value={email}
-              placeholder="useless placeholder"
-              placeholderTextColor="#000"
-            />
-
-            <Text style={styles.text}>Tutor(a)</Text>
-            <TextInput
-              style={styles.input}
-              onChangeText={setTutor}
-              value={tutor}
-              placeholder="useless placeholder"
-              placeholderTextColor="#000"
-            />
-
-            <View style={styles.buttonContainer}>
-              <Button
-                title='Salvar Alteracoes'
-                onPress={() => Alert.alert('Situação', 'As alterações foram salvas!')}
-                color='#FF7714'
+            <View onLayout={onLayoutRootView} style={styles.container4}>
+              <Text style={styles.text}>Senha</Text>
+              <TextInput
+                style={styles.input}
+                onChangeText={setNumber}
+                value={number}
+                placeholder="useless placeholder"
+                placeholderTextColor="#000"
+                keyboardType="numeric"
               />
+
+              <Text style={styles.text}>E-mail</Text>
+              <TextInput
+                style={styles.input}
+                onChangeText={setEmail}
+                value={email}
+                placeholder="useless placeholder"
+                placeholderTextColor="#000"
+              />
+
+              <Text style={styles.text}>Tutor(a)</Text>
+              <TextInput
+                style={styles.input}
+                onChangeText={setTutor}
+                value={tutor}
+                placeholder="useless placeholder"
+                placeholderTextColor="#000"
+              />
+
+              <View style={styles.buttonContainer}>
+                <Button
+                  title='Salvar Alteracoes'
+                  onPress={() => Alert.alert('Situação', 'As alterações foram salvas!')}
+                  color='#FF7714'
+                />
+              </View>
             </View>
           </View>
-        </View>
-    </SafeAreaView>
-  );
+      </SafeAreaView>
+    );
+  };
 }
 
 const styles = StyleSheet.create({
